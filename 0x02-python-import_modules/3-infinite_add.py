@@ -10,5 +10,4 @@ if __name__ == "__main__":
     result = sum(args)
 
     # Print the result
-    print(result)
-
+    print("{}".format(result))
