@@ -7,11 +7,8 @@ number = random.randint(-100, 100)
 
 # Check if the number is positive, zero, or negative
 if number > 0:
-    result = "is positive"
+    print("{} is positive".format(number))
 elif number == 0:
-    result = "is zero"
+    print("{} is zero".format(number))
 else:
-    result = "is negative"
-
-#Print the number and its status
-print("The number {} {}".format(number, result))
+    print("{} is negative".format(number))
