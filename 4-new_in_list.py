@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+import py_compile
+import importlib
 
 if __name__ == "__main__":
-    """Print all names defined by hidden_4 module."""
-    import hidden_4
+    py_compile.compile("hidden_4.pyc")  # Compile the module if not already compiled
+    module = importlib.import_module("hidden_4")
+    
+    names = [name for name in dir(module) if not name.startswith('__')]
+    
+    for name in sorted(names):
+        print(name)
 
-    names = dir(hidden_4)
-    for name in names:
-        if name[:2] != "__":
-            print(name)
